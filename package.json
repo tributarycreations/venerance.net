@@ -1,0 +1,24 @@
+{
+  "name": "venerance.net",
+  "version": "0.1.0",
+  "description": "Main website for Venerance: Sigma Octanus IV (https://www.venerance.net)",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tributarycreations/venerance.net.git"
+  },
+  "author": "James McLean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tributarycreations/venerance.net/issues"
+  },
+  "homepage": "https://github.com/tributarycreations/venerance.net#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2",
+    "parcel": "^1.9.7"
+  }
+}
