@@ -99,4 +99,27 @@ body {
 #social > a {
   margin: 0 0.425rem;
 }
+
+.footer {
+  background-color: lighten($vgreen, 15%);
+  font-size: 0.79rem;
+  .container {
+    .fcontent {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        width: 100%;
+        padding: 0;
+        margin: 0.7rem 0;
+        text-shadow: 1px 1px 1px $black;
+        a {
+          color: white;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 // Utility Classes
