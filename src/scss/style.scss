@@ -1,16 +1,20 @@
 @import "mixins";
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,700");
 
 // Colors
 $primary: #0c1425;
 $secondary: #9dabb6;
 $tertiary: #6388a6;
 $black: #040404;
+$vgreen: rgb(48, 58, 43);
 
+html,
 body {
   background: $primary;
   color: whitesmoke;
   margin: 0;
   padding: 0;
+  font-family: "Orbitron", serif;
 }
 
 .parallax {
@@ -21,111 +25,78 @@ body {
   background-position: center;
 }
 
+.overlay {
+  @include overlay($vgreen, 0.5);
+}
+
 .paralimg1 {
   background-image: url("../img/nanosuitmjolnir.jpg");
   position: relative;
   z-index: 0;
-
-  .overlay {
-    @include overlay($primary, 0.2);
-  }
 }
 
 .paralimg2 {
   background-image: url("../img/junglestealthgpost_ani.png");
   position: relative;
   z-index: 0;
-  .overlay {
-    @include overlay($primary, 0.2);
-  }
 }
 
 .paralimg3 {
   background-image: url("../img/view2.jpg");
   position: relative;
   z-index: 0;
-  .overlay {
-    @include overlay($primary, 0.2);
-  }
 }
 
 .paralimg4 {
   background-image: url("../img/jockeyscavengers.png");
   position: relative;
   z-index: 0;
-  .overlay {
-    @include overlay($tertiary, 0.5);
-  }
 }
 
 .navbar {
-  height: 4.5rem;
+  height: 3.75rem;
   transition: all 0.25s;
-}
-
-.footer {
-  background-color: $primary;
-  // min-height: 10vh;
 }
 
 .navbar-brand {
-  color: whitesmoke;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 1.75rem;
-
   img {
-    height: 75px;
-    width: 75px;
+    height: 45px;
+    width: 45px;
   }
 }
 
-.navbar-nav > li {
-  padding-left: 30px;
-  padding-right: 30px;
-  box-sizing: border-box;
+.navbar-nav > .nav-item {
+  a {
+    margin: 0 1rem;
+    padding: 0 !important;
+  }
 }
+
 .nav-link {
   color: whitesmoke;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.5rem;
-  border-bottom: 5px transparent solid;
-  text-shadow: 2px 2px $black;
-  transition: all 0.25s;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px $black;
+  transition: all 0.3s;
+  border-bottom: 3px transparent solid;
+  box-sizing: border-box;
 }
 
 .nav-link:hover {
-  color: whitesmoke;
+  color: lighten($vgreen, 30%);
+}
+
+.active {
   border-bottom: 3px whitesmoke solid;
+  box-shadow: 0 4px 2px -2px $black;
 }
 
-div .embed-responsive {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
+.active:hover {
+  border-bottom: 3px lighten($vgreen, 30%) solid;
 }
 
-@media (max-width: 991px) {
-  .navbar-brand {
-    img {
-      height: 150px;
-      width: 150px;
-    }
-  }
+#social > a {
+  margin: 0 0.425rem;
 }
-@media (max-width: 489px) {
-  .navbar-brand {
-    display: none;
-  }
-
-  .navbar-nav {
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto li {
-      margin: 5px 0;
-    }
-  }
-}
-
 // Utility Classes

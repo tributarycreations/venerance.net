@@ -2,12 +2,10 @@ import "../scss/style.scss";
 
 $(document).ready(function() {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 200) {
-      $(".navbar").css("background-color", "rgba(0,0,0,0.65)");
-      $(".navbar-brand").css("display", "block");
+    if ($(this).scrollTop() > 75) {
+      $(".navbar").css("background-color", "rgba(48,58,43,0.90)");
     } else {
       $(".navbar").css("background-color", "transparent");
-      $(".navbar-brand").css("display", "none");
     }
   });
 });
@@ -19,9 +17,6 @@ $(".navbar ul li a").on("click", function(e) {
     {
       scrollTop: $(hash).offset().top
     },
-    1000,
-    function() {
-      window.location.hash = hash;
-    }
+    500
   );
 });
